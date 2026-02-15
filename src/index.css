@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: 'Urbanist', sans-serif;
+}
+
+.landing-page {
+  overflow-y: auto;
+  height: 100vh;  
+}
+
+.landing-page-content {
+  overflow: visible;
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4b5563;
+  transition: color 0.3s;
+}
+
+.card-btn:hover {
+  color: #9333ea;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem; /* gap-1.5 */
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 500; /* font-medium */
+  color: #15803d; /* text-green-700 */
+  white-space: nowrap;
+  transition-property: color;
+  transition-duration: 300ms;
+}
+
+@media (min-width: 768px) {
+  .add-btn {
+    font-size: 0.875rem; /* md:text-sm */
+  }
+}
+
+.add-btn:hover {
+  color: #166534; /* text-green-900 */
+}
+
+.add-btn-fill {
+  color: #fff;
+  background-color: #9333ea;
+}
