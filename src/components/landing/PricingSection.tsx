@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import type { PricingPlan } from "../../assets/data";
 
-const PricingSection = ({pricingPlans}: {pricingPlans: PricingPlan[]}) => {
+const PricingSection = ({pricingPlans, openSignUp}: {pricingPlans: PricingPlan[], openSignUp: () => void }) => {
     return (
         <div className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px6 lg:px-6">
@@ -46,7 +46,9 @@ const PricingSection = ({pricingPlans}: {pricingPlans: PricingPlan[]}) => {
                                     ))}
                                 </ul>
                                 <div className="rounded-md shadow">
-                                    <button className={`w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white ${plan.highlighted ? "bg-purple-600 hover:bg-purple-700" : "bg-gray-600 hover:bg-gray-700"} transition-colors duration-200`}>
+                                    <button
+                                        onClick={openSignUp}
+                                        className={`w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white ${plan.highlighted ? "bg-purple-600 hover:bg-purple-700" : "bg-gray-600 hover:bg-gray-700"} transition-colors duration-200`}>
                                         {plan.cta}
                                     </button>
                                 </div>

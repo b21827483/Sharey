@@ -1,7 +1,12 @@
 import { assets } from "../../assets/assets"
 
-const HeroSection = () => {
+interface HeroSectionProps {
+    openSignIn: () => void;
+    openSignUp: () => void;
+}
 
+const HeroSection = ({ openSignIn, openSignUp }: HeroSectionProps) => {
+    
     return (
         <div className="landing-page-content relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-indigo-50 opacity-80 z-0 pointer-events-none"></div>
@@ -17,10 +22,10 @@ const HeroSection = () => {
                         </p>
                         <div className="mt-10 max-w-sm mx-auto sm:max-w-none flex justify-center">
                             <div className="space-y-4 sm:space-y-0 sm:mx-auto inline-grid sm:grid-cols-2 sm:gap-5">
-                                <button className="flex items-center px-6 py-3 border border-transparent text-base font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
-                                    Get Started
+                                <button onClick={openSignUp} className="flex items-center px-6 py-3 border border-transparent text-base font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                                    Sign Up
                                 </button>
-                                <button className="flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 transition-all duration-200 shadow-md hover-shadow-lg">
+                                <button onClick={openSignIn} className="flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium text-gray-700 bg-white rounded-md hover:bg-gray-100 transition-all duration-200 shadow-md hover-shadow-lg">
                                     Sign In
                                 </button>
                             </div>
