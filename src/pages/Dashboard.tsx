@@ -3,9 +3,9 @@ import DasboardLayout from "../layout/DashboardLayout";
 
 const Dashboard = () => {
     return (
-        <DasboardLayout>
+        <DasboardLayout activeMenu="Dashboard">
             <div>
-                <UserButton />
+                Dashboard
             </div>
         </DasboardLayout>
     )

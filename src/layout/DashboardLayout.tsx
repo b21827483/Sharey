@@ -1,16 +1,17 @@
 import { useUser } from "@clerk/clerk-react";
-import Navbar from "../components/landing/Navbar";
+import Navbar from "../components/Navbar";
+import SideMenu from "../components/SideMenu";
 
-const DasboardLayout = ({children}: {children: React.ReactNode}) => {
+const DasboardLayout = ({children, activeMenu}: {children: React.ReactNode, activeMenu: string}) => {
     const {user} = useUser();
     return (
         <div>
-            <Navbar />
+            <Navbar activeMenu={activeMenu} />
             {user && (
                 <div className="flex">
                     <div className="max-[1080px]:hidden">
                         {/*Sidebar*/}
-                        side menu
+                        <SideMenu activeMenu={activeMenu} />
                     </div>
                     <div className="grow mx-5">
                         {children}

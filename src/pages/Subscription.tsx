@@ -1,6 +1,12 @@
+import DasboardLayout from "../layout/DashboardLayout"
+
 const Subscription = () => {
     return (
-        <div>Subscription page</div>
+        <DasboardLayout activeMenu="Subscription">
+            <div>
+                Subscription
+            </div>
+        </DasboardLayout>
     )
 }
 

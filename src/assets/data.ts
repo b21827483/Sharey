@@ -1,3 +1,5 @@
+import { CreditCard, Files, LayoutDashboard, Receipt, Upload } from "lucide-react";
+
 export const features = [
     {
         iconName: "ArrowUpCircle",
@@ -135,5 +137,38 @@ export const testimonials = [
         company: "Design Studio",
         quote: "I love how secure and reliable this service is. It gives me peace of mind knowing my files are safe.",
         rating: 5
+    }
+];
+
+export const SIDE_MENU_ITEMS = [
+    {
+        id: "01",
+        lable: "Dashboard",
+        icon: LayoutDashboard,
+        path: "/dashboard"
+    },
+    {
+        id: "02",
+        lable: "My Files",
+        icon: Files,
+        path: "/files"
+    },
+    {
+        id: "03",
+        label: "Upload",
+        icon: Upload,
+        path: "/upload"
+    },
+    {
+        id: "04",
+        label: "Subscription",
+        icon: CreditCard,
+        path: "/subscription"
+    },
+    {
+        id: "05",
+        label: "Transactions",
+        icon: Receipt,
+        path: "/transactions"
     }
 ];

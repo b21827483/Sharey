@@ -1,6 +1,12 @@
+import DasboardLayout from "../layout/DashboardLayout"
+
 const MyFiles = () => {
     return (
-        <div>My Files Page</div>
+        <DasboardLayout activeMenu="My Files">
+            <div>
+                My Files
+            </div>
+        </DasboardLayout>
     )
 }
 
